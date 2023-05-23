@@ -72,7 +72,9 @@ if __name__ == '__main__':
         jax.distributed.initialize(args.IP, num_processes=n_processes,
                                    process_id=process_id)
     elif n_processes == -1:
+        print("Will ball jax.distributed.initialize()")
         jax.distributed.initialize()
+        print("jax.distributed.initialize() ended")
     else:
         print("No call to jax.distributed.initialize")
 
